@@ -26,19 +26,26 @@ from state import AppState
 def create_bodies() -> list[Body]:
     """Return two stars in a mildly elliptical orbit."""
     return [
-        Body(  # Sun-like
-            2.0e30,  # kg (≈ Sun)
-            (-7.5e10, 0),  # m
-            (0, -14_000),  # m/s
-            (255, 200, 0),  # yellow-orange
+        Body(  # vertex at +x
+            2.0e30,                       # kg (≈ Sun)
+            (1.0e11, 0),                  # m
+            (0, 27_761.15596171139),      # m/s
+            (255, 200, 0),                # yellow-orange
             10
         ),
-        Body(  # 0.5 M☉
-            1.0e30,  # kg (≈ 0.5 M☉)
-            (7.5e10, 0),  # m
-            (0, 28_000),  # m/s
-            (0, 180, 255),  # blue
-            8
+        Body(  # 120° CCW
+            2.0e30,                       # kg
+            (-5.0e10, 8.6602540378e10),   # m
+            (-24_041.866301263883, -13_880.577980855689),  # m/s
+            (255, 200, 0),
+            10
+        ),
+        Body(  # 240° CCW
+            2.0e30,                       # kg
+            (-5.0e10, -8.6602540378e10),  # m
+            (24_041.866301263875, -13_880.577980855707),   # m/s
+            (255, 200, 0),
+            10
         ),
     ]
 

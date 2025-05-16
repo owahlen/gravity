@@ -8,4 +8,4 @@ FPS        = 120        # target frames per second
 # Physics
 G          = 6.6743e-11   # gravitational constant (m³ kg⁻¹ s⁻²)
 SCALE      = 2e-9         # metres → pixels
-TIME_STEP  = 60*60*24     # simulated seconds per frame (1 day)
+TIME_STEP  = 60*60*2      # simulated seconds per frame (1 day)
