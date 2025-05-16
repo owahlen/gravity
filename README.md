@@ -1,6 +1,6 @@
 # Gravity Simulation
 
-A minimal interactive gravity simulator that visualizes two point masses orbiting each other in real time.
+A minimal interactive gravity simulator that visualizes point masses orbiting each other in real time.
 
 ![Gravity Simulation](docs/gravity.png)
 
@@ -13,36 +13,30 @@ A minimal interactive gravity simulator that visualizes two point masses orbitin
 * Pause/resume with one click
 * Clean, dependency‑light code (only **pygame**)
 
-## Requirements
-
-| Package | Version (tested) |
-|---------|------------------|
-| Python  | 3.8 + |
-| pygame  | ≥ 2.5 |
-
-Install the requirement:
+## Installation
 
 ```bash
-pip install pygame
+pip install -r requirements.txt
 ```
 
 ## Running
 
 ```bash
-python gravity.py
+python3 simulation.py
 ```
 
 ### Controls
 
-| Action | Key / Mouse |
-|--------|-------------|
-| Pause / resume | **Left mouse button** |
-| Quit | **Esc** or window close |
+| Action         | Key / Mouse             |
+|----------------|-------------------------|
+| Pause / resume | **Left mouse button**   |
+| Full screen    | **F11**                 |
+| Quit           | **Esc** or window close |
 
-## Customising
+## Customizing and Opportunity for Improvements
 
-* **Add more bodies**  
-  Duplicate or create new `Body(...)` instances and append to the `bodies` list.
+* **Add more bodies**
+  In simulation.py add more `Body(...)` instances and append to the `bodies` list.
 
 * **Better integrator**  
   Replace the Euler block with Velocity‑Verlet for energy conservation:
@@ -55,22 +49,3 @@ python gravity.py
   b.vel += 0.5 * (a_old + a_new) * dt
   ```
 
-* **Trails**  
-  Store previous positions in a list and draw a polyline.
-
-* **Zoom / Pan**  
-  Adjust `SCALE` dynamically; offset the origin with arrow keys or mouse drag.
-
-## Folder structure (suggestion)
-
-```
-gravity/
-├── gravity.py      # main code
-├── resources/      # icons, future sprites
-└── docs/
-    └── gravity.png
-```
-
-## License
-
-MIT — feel free to use this code for any purpose. Pull requests welcome!
